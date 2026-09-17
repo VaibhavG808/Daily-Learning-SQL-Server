@@ -82,3 +82,36 @@ CASE
 	END Tax_Deduction
 FROM
 	Employees;
+
+
+-- CASE 8 The Promotion Checker --
+	SELECT fname, lname, hire_date, salary,
+	CASE
+		WHEN hire_date < '2020-01-01' AND salary < 55000 THEN 'Eligible'
+		ELSE 'Not Eligible'
+		END AS Promotion_Status
+	FROM
+		Employees;
+
+
+-- CASE 9 Role Grouping (Using LIKE) --
+SELECT fname, lname, job_title,
+CASE
+	WHEN job_title LIKE '%Lead%' OR job_title LIKE '%Executive%' THEN 'Leadership'
+	WHEN job_title LIKE '%Engineer%' OR job_title LIKE '%Scientist%' THEN 'Technical'
+	ELSE 'General Staff'
+	END AS role_group
+FROM
+	Employees;
+
+
+
+-- CASE 10 The Department-City Matrix --
+SELECT fname, lname, department, city,
+CASE
+	WHEN department = 'Tech' AND city = 'Pune' THEN 'Hybrid'
+	WHEN department = 'Finance' AND city = 'Mumbai' THEN 'On-site'
+	ELSE 'Remote'
+	END AS office_requirements
+FROM
+	Employees;
