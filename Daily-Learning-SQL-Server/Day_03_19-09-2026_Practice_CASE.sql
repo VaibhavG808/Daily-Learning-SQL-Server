@@ -66,6 +66,7 @@ ORDER BY department;
 1. Find departments with more than 2 employees
 2. Find job titles with an average salary above 40000
 3. Find department with average salary above 50000
+4. Find department with total salary above 90000
 */
 
 SELECT department, COUNT(emp_id) AS emp
@@ -81,3 +82,29 @@ HAVING AVG(salary) > 40000;
 SELECT department, AVG(salary) avg_salary 
 FROM Employees GROUP BY department
 HAVING AVG(salary) > 50000;
+
+
+SELECT department, SUM(salary) total_salary
+FROM Employees GROUP BY department
+HAVING SUM(salary) > 100000;
+
+
+
+-- GROUP BY ROLLUP --
+SELECT department, COUNT(emp_id) FROM Employees
+GROUP BY ROLLUP(department);
+
+SELECT job_title, SUM(salary) FROM Employees
+GROUP BY ROLLUP(job_title);
+
+/*
+1. Employee headcount by city and department.
+* You want a report showing the number of employees
+for each city within each department, subtotal for
+each department and grand total for entire company.
+*/
+
+-- COALESCE
+
+SELECT department, COALESCE( city,'Total'), COUNT(emp_id) 
+FROM Employees GROUP BY ROLLUP(department, city);
