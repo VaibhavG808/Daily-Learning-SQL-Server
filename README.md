@@ -96,4 +96,3 @@ What are triggers
 What is Normalization
 Import & Export Databases
 Import Data from CSV
-<img width="81" height="2329" alt="image" src="https://github.com/user-attachments/assets/2fc2ff65-6553-47b3-bd63-aeee452ff69e" />
