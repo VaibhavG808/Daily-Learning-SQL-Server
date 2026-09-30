@@ -1,0 +1,287 @@
+---------------------------------------------
+-- List down existing databases 
+----------------------------------------------
+----------------------------------------------
+-- Creating a Database
+----------------------------------------------
+----------------------------------------------
+-- Chenge or using Database
+----------------------------------------------
+----------------------------------------------
+-- Deleting or Drop Databases
+----------------------------------------------
+----------------------------------------------
+-- CRUD Operations -- CREATE | READ | UPDATE | DELETE
+----------------------------------------------
+-- Creating Table
+/* A table is a colletion of related data held in
+a table format within a Database. */
+
+-- Checking exsting table
+----------------------------------------------
+-- Insert Data into Table
+----------------------------------------------
+
+----------------------------------------------
+-- READ DATA FROM TABLE
+----------------------------------------------
+----------------------------------------------
+-- UPDATE DATA FROM TABLE
+----------------------------------------------
+----------------------------------------------
+-- DELETE DATA FROM TABLE
+----------------------------------------------
+----------------------------------------------
+-- TRUNCATE QUERY
+----------------------------------------------
+----------------------------------------------
+-- Exercise for CRUD Operations
+----------------------------------------------
+-- Q1. Write a query to chenge grade of John from 7 to 8
+-- Q2. Add a new student to the table
+-- ID = 105, Name = 'Alex', Age = 12, Grade = 7.
+
+-- Q3. Write a query to remove 'John' from table
+-- Q4. Write a query to retrive only the details for the student name 'Alex'.
+-- Q5. Write a query to print/get Age of 'Ram'.
+----------------------------------------------
+/* Data Types: An attribute taht defines that
+kind of data a column in a database table can
+hold, such as numbers, text, dates, or boolean 
+values.
+*/
+----------------------------------------------
+/* MOST WIDELY USED DATATYPES
+1. Numeric - INT | BIGINT | DECIMAL(5,2) EX. 155.25, 28.15 | FLOAT | NUMBER
+2. String - VARCHAR | NVARCHAR | CHAR
+3. Date - DATE
+4. Date Time - DATETIME
+5. Boolean - BIT(0/1)
+*/
+
+
+----------------------------------------------
+/* Constraint : A constraint is decide what type
+of data is allowed in a column.
+*/
+----------------------------------------------
+/*
+1. PRIMARY KEY
+2. NOT NULL
+3. IDENTITY
+4. DEFAULT
+5. UNIQUE
+*/
+
+----------------------------------------------
+-- Problems of the current table.
+----------------------------------------------
+----------------------------------------------
+-- PRIMAR KEY
+----------------------------------------------
+/*
+1. Primary key constraint uniquely identifies each record in a table.
+2. Primary keys must contain UNIQUE values, and cannot contain NULL values.
+3. A table can have only one primary key.
+*/
+----------------------------------------------
+/* If you need to use two or more columns to
+uniquely identify a record use this method.
+*/
+----------------------------------------------
+----------------------------------------------
+-- UNIQUE CONSTRAINT
+----------------------------------------------
+/*
+1. A UNIQUE Constraint makes sure that no two rows
+in a table have the same value in the column.
+2. It helps to prevent duplicate data, like the 
+same email or phone number being used twice.
+3. However NULL is allowed - but only once 
+(because NULL is treated as "Unknown", and SQL 
+allows one unknown value in a unique column).
+*/
+
+
+----------------------------------------------
+-- NOT NULL
+----------------------------------------------
+
+-- DEFAULT 
+
+-- IDENTITY
+
+/* 
+1. It is used to automatically generate unique numbers 
+for a column when new rows are inserted into a table.
+2. It works like auto-increament, usually for primary key
+columns.
+*/
+
+----------------------------------------------
+-- Task : Create a Employee table using all the constraints.
+----------------------------------------------
+/* Requirements:
+1. emp_id set as primary key and its value should be auto-increament by 1 starting from 101.
+2. Email should be unique.
+3. NULL value should not be allowed in 
+	fname, lname, email, job_title
+4. Salary Column - default set to 30,000 if not provided
+5. Hire_date - default set to today's date
+*/
+
+-- Creating new database for employees table 
+
+
+-- Inserting employee data
+
+----------------------------------------------
+-- SELECTING DATA YOU NEED.
+----------------------------------------------
+/*
+1. WHERE | DISTINCT | ORDER BY | LIKE | TOP
+2. Logical Operators
+3. IN | NOT IN | BETWEEN
+*/
+
+----------------------------------------------
+-- CLAUSES
+----------------------------------------------
+/*
+A SQL Caluse is a part of a SQL statement that 
+defines specific actions or conditions for 
+querying, filtering or organizing data in a 
+database.
+*/
+
+
+----------------------------------------------
+-- WHERE 
+----------------------------------------------
+
+-- 1. Find Employees in the IT department.
+-- 2. Find employees with salary above 50,000.
+-- 3. Find employees hired after 2020.
+-- 4. Find employees whos department is not HR.
+
+-- DISTINCT 
+-- ORDER BY 
+-- LIKE (Wildcard)
+-- TOP
+
+
+-- Exercise 1
+-- Q.1 Find Different type of departments in table
+-- Q.2 Display records with high-low salary
+-- Q.3 How to see only top 3 records from the table
+-- Q.4 Show records where first name starts with letter 'A'
+-- Q.5 Show the records where length of the first name is 4 character
+
+
+-- Logical Operators ( AND , OR )
+-- IN | NOT IN | BETWEEN
+
+
+-- CASE
+
+/* Q.1 Calculate a bonus amount. Human Resource and Finance get a 10% bonus,
+	Tech gets a 12% bonus, and everyone else gets a standard 5% bouns.
+*/
+
+-- NOT NULL
+-- NOT LIKE
+
+
+-- Aggrigate functions
+-- GROUP BY
+-- MULTICOLUMN GROUPING
+-- HAVING CLAUSE --
+
+/*
+1. Find departments with more than 2 employees
+2. Find job titles with an average salary above 40000
+3. Find department with average salary above 50000
+4. Find department with total salary above 90000
+*/
+
+-- employees greater than 1
+-- avg salary by department
+-- total salary by department
+-- GROUP BY ROLLUP
+
+-- SECTION 5 --
+-- AGGRIGATE FUNCTIONS --
+
+/*
+Q.1 How to find total no. of employees?
+Q.2 Employee with Max or Min salary
+Q.3 Average Salary of employees
+Q.4 Sum/total salary paid
+*/
+
+-- Aggrigate Functions --
+
+-- COUNT --
+-- MIN --
+-- MAX --
+-- AVG --
+-- SUM --
+
+
+-- SECTION 5.2 --
+
+-- GROUP BY --
+
+-- Q.1 No. of employees by department --
+
+/*
+Q.1 Find number of employees in each department
+Q.2 Find number of employees in each city
+Q.3 Find average salary in each department
+*/
+
+-- MULTI COLUMN GROUPING --
+-- HAVING CLAUSE --
+/*
+1. Find departments with more than 2 employees
+2. Find job titles with an average salary above 40000
+3. Find department with average salary above 50000
+4. Find department with total salary above 90000
+*/
+
+-- GROUP BY ROLLUP --
+
+
+/*
+1. Employee headcount by city and department.
+* You want a report showing the number of employees
+for each city within each . department, subtotal for
+each department and grand total for entire company.
+*/
+
+-- COALESCE
+
+
+-- Sub Query Inline View --
+-- 1. find departments whos average salary is above 50000
+
+-- INLINE VIWE --
+
+-- 2. MAX salary is above 55000
+-- 3. TOTAL SALARY IS ABOVE 80000
+-- 4. MINIMUM SALARY IS LESS THAN 50000
+
+
+-- SECTION 6 --
+-- STRING FUNCTION --
+/* 1. CONCAT / CONCAT_WS
+2. SUBSTRING
+3. LEFT / RIGHT
+4. LEN
+5. UPPER / LOWER
+6. TRIM / LTRIM / RTRIM
+7. REPLACE
+8. CHARINDEX
+*/
+
+
