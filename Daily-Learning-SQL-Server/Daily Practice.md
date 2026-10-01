@@ -1,16 +1,100 @@
-**Absolutely — if this is a \*\*day-by-day SQL learning tracker\*\*, I’d keep it minimal: clear sections, topic progression, and exercises only. No explanations or SQL code.**
+**Absolutely. I’ll turn \*\*every topic you listed into simple daily SQL practice\*\*.**
 
 
 
-&#x20;**SQL Daily Learning Topics \& Exercises**
+&#x20;**I’ll keep the questions beginner-friendly and practical, with \*\*10 questions per topic\*\*. You can solve them yourself first, then send me your answers and I’ll check them.**
 
 
 
-**# SQL — Daily Learning Topics \& Exercises**
+&#x20;**## Day 1 — CASE Statements**
 
 
 
-&#x20;**A structured day-by-day learning plan covering SQL fundamentals, data manipulation, filtering, aggregation, string functions, and date functions.**
+&#x20;**Assume table:**
+
+
+
+&#x20;**`Employees(emp\_id, fname, salary, department, city, hire\_date, email)`**
+
+
+
+&#x20;**1. Display all employees and create a column `SALARY\_BAND`.**
+
+&#x20;  **- Salary \\> 60000 → `'High'`**
+
+&#x20;  **- Salary 50000–60000 → `'Medium'`**
+
+&#x20;  **- Otherwise → `'Low'`**
+
+**2. Display `fname`, `salary`, and classify employees:**
+
+&#x20;  **- Salary \\>= 70000 → `'Excellent'`**
+
+&#x20;  **- Salary \\>= 50000 → `'Good'`**
+
+&#x20;  **- Otherwise → `'Needs Improvement'`**
+
+**3. Create a column `CITY\_TYPE`.**
+
+&#x20;  **- Pune → `'Pune Employee'`**
+
+&#x20;  **- Mumbai → `'Mumbai Employee'`**
+
+&#x20;  **- Otherwise → `'Other City'`**
+
+**4. Create a column `SALARY\_LEVEL`.**
+
+&#x20;  **- Salary \\< 40000 → `'Entry'`**
+
+&#x20;  **- 40000–60000 → `'Mid'`**
+
+&#x20;  **- > 60000 → `'Senior'`**
+
+**5. Display employees and classify their departments:**
+
+&#x20;  **- IT → `'Technology'`**
+
+&#x20;  **- HR → `'Human Resources'`**
+
+&#x20;  **- Sales → `'Business'`**
+
+&#x20;  **- Otherwise → `'Other'`**
+
+**6. Create an `AGE\_GROUP` column using an `age` column:**
+
+&#x20;  **- \\< 25 → `'Young'`**
+
+&#x20;  **- 25–40 → `'Adult'`**
+
+&#x20;  **- > 40 → `'Senior'`**
+
+**7. Create a column `BONUS`.**
+
+&#x20;  **- Salary \\> 70000 → 10000**
+
+&#x20;  **- Salary 50000–70000 → 5000**
+
+&#x20;  **- Otherwise → 2000**
+
+**8. Display `fname`, `salary`, and a column showing:**
+
+&#x20;  **- Salary \\>= 60000 → `'Eligible'`**
+
+&#x20;  **- Otherwise → `'Not Eligible'`**
+
+**9. Sort employees by salary and display a salary category using `CASE`.**
+
+**10. Create a `PERFORMANCE` column based on salary:**
+
+
+
+&#x20;**- > = 80000 → `'A'`**
+
+**- > = 60000 → `'B'`**
+
+**- > = 40000 → `'C'`**
+
+**- Otherwise → `'D'`**
 
 
 
@@ -18,77 +102,29 @@
 
 
 
-&#x20;**## Day 01 — Database Fundamentals**
+&#x20;**# Day 2 — Subqueries**
 
 
 
-&#x20;**### Topics**
+&#x20;**1. Find employees whose salary is \*\*greater than the average salary\*\*.**
 
+**2. Find employees whose salary is \*\*less than the average salary\*\*.**
 
+**3. Find the employee(s) having the \*\*maximum salary\*\*.**
 
-&#x20;**- Databases**
+**4. Find the employee(s) having the \*\*minimum salary\*\*.**
 
-**- Listing Databases**
+**5. Find employees who earn the \*\*same salary as the highest-paid employee in the IT department\*\*.**
 
-**- Creating a Database**
+**6. Find employees who work in the \*\*same department as the employee named 'Rahul'\*\*.**
 
-**- Selecting / Using a Database**
+**7. Find employees who live in the \*\*same city as the employee named 'Amit'\*\*.**
 
-**- Dropping a Database**
+**8. Find employees whose salary is greater than the salary of the employee named `'Priya'`.**
 
+**9. Find the employee(s) having the \*\*maximum salary in each department\*\*.**
 
-
-**---**
-
-
-
-&#x20;**## Day 02 — CRUD Operations**
-
-
-
-&#x20;**### Topics**
-
-
-
-&#x20;**- CRUD Overview**
-
-**- Creating Tables**
-
-**- Viewing Existing Tables**
-
-**- Inserting Data**
-
-**- Reading Data**
-
-**- Updating Data**
-
-**- Deleting Data**
-
-**- TRUNCATE**
-
-
-
-&#x20;**### Exercises**
-
-
-
-&#x20;**- Change John's grade from 7 to 8.**
-
-**- Add a new student:**
-
-&#x20; **- ID: 105**
-
-&#x20; **- Name: Alex**
-
-&#x20; **- Age: 12**
-
-&#x20; **- Grade: 7**
-
-**- Remove John from the table.**
-
-**- Retrieve the details of Alex.**
-
-**- Retrieve the age of Ram.**
+**10. Find employees who belong to a department where \*\*at least 2 employees work\*\*.**
 
 
 
@@ -96,43 +132,37 @@
 
 
 
-&#x20;**## Day 03 — Data Types**
+&#x20;**# Day 3 — String Functions**
 
 
 
-&#x20;**### Topics**
+&#x20;**Practice these functions:**
 
 
 
-&#x20;**- Introduction to Data Types**
+&#x20;**`CONCAT, CONCAT\_WS, LEN, TRIM, SUBSTRING, LEFT, RIGHT, UPPER, LOWER, REPLACE, REVERSE, CHARINDEX`**
 
-**- Numeric Data Types**
 
-&#x20; **- INT**
 
-&#x20; **- BIGINT**
+&#x20;**1. Combine `fname` and `department` using `CONCAT`.**
 
-&#x20; **- DECIMAL**
+**2. Combine `fname`, `city`, and `department` using `CONCAT\_WS` with `'-'`.**
 
-&#x20; **- FLOAT**
+**3. Find the length of every employee's `fname`.**
 
-**- String Data Types**
+**4. Remove leading/trailing spaces from `fname` using `TRIM`.**
 
-&#x20; **- VARCHAR**
+**5. Extract the \*\*first 3 characters\*\* of `fname`.**
 
-&#x20; **- NVARCHAR**
+**6. Extract the \*\*last 2 characters\*\* of `fname`.**
 
-&#x20; **- CHAR**
+**7. Convert all employee names to \*\*uppercase\*\*.**
 
-**- Date Data Types**
+**8. Convert all employee names to \*\*lowercase\*\*.**
 
-&#x20; **- DATE**
+**9. Replace `'a'` with `'@'` in employee names.**
 
-&#x20; **- DATETIME**
-
-**- Boolean Data Type**
-
-&#x20; **- BIT**
+**10. Find the position of the letter `'a'` in each employee's `fname` using `CHARINDEX`.**
 
 
 
@@ -140,49 +170,37 @@
 
 
 
-&#x20;**## Day 04 — Constraints**
+&#x20;**# Day 4 — Date Functions**
 
 
 
-&#x20;**### Topics**
+&#x20;**Practice:**
 
 
 
-&#x20;**- Introduction to Constraints**
-
-**- PRIMARY KEY**
-
-**- Composite PRIMARY KEY**
-
-**- UNIQUE**
-
-**- NOT NULL**
-
-**- DEFAULT**
-
-**- IDENTITY**
+&#x20;**`GETDATE(), YEAR, MONTH, DAY, DATEDIFF, DATEADD`**
 
 
 
-&#x20;**### Exercises**
+&#x20;**1. Display the current date and time using `GETDATE()`.**
 
+**2. Display the current year.**
 
+**3. Display the current month.**
 
-&#x20;**- Identify problems with an existing table design.**
+**4. Display the current day.**
 
-**- Create an Employee table using multiple constraints.**
+**5. Display each employee's `hire\_date` and hire year.**
 
-**- Configure an auto-incrementing Employee ID starting from 101.**
+**6. Display each employee's `hire\_date` and hire month.**
 
-**- Make Email unique.**
+**7. Display each employee's `hire\_date` and hire day.**
 
-**- Prevent NULL values in required columns.**
+**8. Find how many \*\*years\*\* each employee has worked.**
 
-**- Set a default salary.**
+**9. Find employees who were hired after `'2020-01-01'`.**
 
-**- Set the default hire date to the current date.**
-
-**- Insert employee records using the defined constraints.**
+**10. Display each employee's hire date and calculate the date \*\*30 days after their hire date\*\*.**
 
 
 
@@ -190,51 +208,33 @@
 
 
 
-&#x20;**## Day 05 — SELECT \& Data Filtering**
+&#x20;**# Day 5 — ALTER TABLE**
 
 
 
-&#x20;**### Topics**
+&#x20;**Practice adding, removing, and modifying columns.**
 
 
 
-&#x20;**- SELECT**
+&#x20;**1. Add a column `phone` with datatype `VARCHAR(15)`.**
 
-**- WHERE**
+**2. Add a column `address` with datatype `VARCHAR(100)`.**
 
-**- DISTINCT**
+**3. Add a column `bonus` with datatype `DECIMAL(10,2)`.**
 
-**- ORDER BY**
+**4. Drop the `phone` column.**
 
-**- LIKE**
+**5. Drop the `address` column.**
 
-**- TOP**
+**6. Change the datatype of `fname` to `VARCHAR(100)`.**
 
-**- Wildcards**
+**7. Change the datatype of `salary` to `DECIMAL(12,2)`.**
 
+**8. Add a column `joining\_year` with datatype `INT`.**
 
+**9. Change the datatype of `email` to `VARCHAR(150)`.**
 
-&#x20;**### Exercises**
-
-
-
-&#x20;**- Find employees in the IT department.**
-
-**- Find employees with salary above 50,000.**
-
-**- Find employees hired after 2020.**
-
-**- Find employees who are not in HR.**
-
-**- Find different departments.**
-
-**- Display employees ordered by salary from highest to lowest.**
-
-**- Display the top 3 records.**
-
-**- Find employees whose first name starts with `A`.**
-
-**- Find employees whose first name contains exactly 4 characters.**
+**10. Add a column `status` with datatype `VARCHAR(20)`.**
 
 
 
@@ -242,53 +242,33 @@
 
 
 
-&#x20;**## Day 06 — Operators \& Conditional Logic**
+&#x20;**# Day 6 — Rename Table \& Column**
 
 
 
-&#x20;**### Topics**
+&#x20;**1. Rename column `fname` to `first\_name`.**
+
+**2. Rename column `city` to `location`.**
+
+**3. Rename column `department` to `dept`.**
+
+**4. Rename column `salary` to `monthly\_salary`.**
+
+**5. Rename table `employees` to `staff`.**
+
+**6. Rename table `staff` back to `employees`.**
+
+**7. Rename `first\_name` back to `fname`.**
+
+**8. Rename `dept` back to `department`.**
+
+**9. Rename `location` back to `city`.**
+
+**10. Rename `monthly\_salary` back to `salary`.**
 
 
 
-&#x20;**- Logical Operators**
-
-&#x20; **- AND**
-
-&#x20; **- OR**
-
-**- IN**
-
-**- NOT IN**
-
-**- BETWEEN**
-
-**- NOT LIKE**
-
-**- CASE Expressions**
-
-
-
-&#x20;**### Exercises**
-
-
-
-&#x20;**- Filter employees using multiple conditions.**
-
-**- Find employees belonging to selected departments.**
-
-**- Find employees outside selected departments.**
-
-**- Find employees within a specific salary range.**
-
-**- Find names that do not match a specific pattern.**
-
-**- Calculate employee bonuses based on department:**
-
-&#x20; **- HR \& Finance → 10%**
-
-&#x20; **- IT → 12%**
-
-&#x20; **- Others → 5%**
+&#x20;**\*\*Note:\*\* In SQL Server, practice these using `sp\_rename`.**
 
 
 
@@ -296,41 +276,29 @@
 
 
 
-&#x20;**## Day 07 — Aggregate Functions**
+&#x20;**# Day 7 — Change Datatype**
 
 
 
-&#x20;**### Topics**
+&#x20;**1. Change `fname` to `VARCHAR(100)`.**
 
+**2. Change `email` to `VARCHAR(150)`.**
 
+**3. Change `city` to `VARCHAR(50)`.**
 
-&#x20;**- Aggregate Functions**
+**4. Change `department` to `VARCHAR(50)`.**
 
-**- COUNT**
+**5. Change `salary` to `DECIMAL(10,2)`.**
 
-**- MIN**
+**6. Change `phone` to `VARCHAR(15)`.**
 
-**- MAX**
+**7. Change `address` to `VARCHAR(200)`.**
 
-**- AVG**
+**8. Change `fname` to `VARCHAR(100) NOT NULL`.**
 
-**- SUM**
+**9. Change `email` to `VARCHAR(150) NOT NULL`.**
 
-
-
-&#x20;**### Exercises**
-
-
-
-&#x20;**- Find the total number of employees.**
-
-**- Find the employee with the maximum salary.**
-
-**- Find the employee with the minimum salary.**
-
-**- Calculate the average salary.**
-
-**- Calculate the total salary paid.**
+**10. Change `salary` to `DECIMAL(12,2) NOT NULL`.**
 
 
 
@@ -338,43 +306,29 @@
 
 
 
-&#x20;**## Day 08 — GROUP BY \& HAVING**
+&#x20;**# Day 8 — DEFAULT Constraint**
 
 
 
-&#x20;**### Topics**
+&#x20;**1. Add a default value `'TRAINEE'` for `department`.**
 
+**2. Add a default value `'UNKNOWN'` for `city`.**
 
+**3. Add a default value `'ACTIVE'` for `status`.**
 
-&#x20;**- GROUP BY**
+**4. Add a default value `0` for `bonus`.**
 
-**- Multiple-Column GROUP BY**
+**5. Add a default value `'Not Provided'` for `phone`.**
 
-**- HAVING**
+**6. Insert an employee without specifying `department` and check the default value.**
 
-**- Aggregate Functions with GROUP BY**
+**7. Insert an employee without specifying `city` and check the default value.**
 
+**8. Insert an employee without specifying `status`.**
 
+**9. Find the constraint name created for your default constraint.**
 
-&#x20;**### Exercises**
-
-
-
-&#x20;**- Find the number of employees in each department.**
-
-**- Find the number of employees in each city.**
-
-**- Find the average salary in each department.**
-
-**- Find the total salary by department.**
-
-**- Find departments with more than 2 employees.**
-
-**- Find job titles with an average salary above 40,000.**
-
-**- Find departments with an average salary above 50,000.**
-
-**- Find departments with total salary above 90,000.**
+**10. Remove/drop the default constraint.**
 
 
 
@@ -382,43 +336,33 @@
 
 
 
-&#x20;**## Day 09 — GROUP BY ROLLUP \& NULL Handling**
+&#x20;**# Day 9 — UNIQUE Constraint**
 
 
 
-&#x20;**### Topics**
+&#x20;**1. Create a table `Students` with a unique `email`.**
+
+**2. Add a unique constraint to `Employees.email`.**
+
+**3. Try inserting two employees with the same email.**
+
+**4. Create a table with a unique `phone` column.**
+
+**5. Add a unique constraint to `phone`.**
+
+**6. Try inserting duplicate phone numbers.**
+
+**7. Create a table where `username` must be unique.**
+
+**8. Add a unique constraint to `username`.**
+
+**9. Try inserting duplicate usernames.**
+
+**10. Drop the unique constraint.**
 
 
 
-&#x20;**- GROUP BY ROLLUP**
-
-**- Subtotals**
-
-**- Grand Totals**
-
-**- NULL Values**
-
-**- IS NULL**
-
-**- IS NOT NULL**
-
-**- COALESCE**
-
-
-
-&#x20;**### Exercises**
-
-
-
-&#x20;**- Generate employee headcount by city and department.**
-
-**- Display department-level subtotals.**
-
-**- Display the overall employee count.**
-
-**- Identify records containing NULL values.**
-
-**- Replace NULL department values with a meaningful label.**
+&#x20;**\*\*Important:\*\* A `UNIQUE` constraint generally prevents duplicate values, while a `PRIMARY KEY` also identifies each row and cannot be `NULL`.**
 
 
 
@@ -426,37 +370,29 @@
 
 
 
-&#x20;**## Day 10 — Subqueries \& Derived Tables**
+&#x20;**# Day 10 — CHECK Constraint**
 
 
 
-&#x20;**### Topics**
+&#x20;**1. Create a table where salary must be greater than `0`.**
 
+**2. Add a CHECK constraint to `Employees.salary` requiring salary \\> 0.**
 
+**3. Try inserting an employee with salary `-5000`.**
 
-&#x20;**- Subqueries**
+**4. Add a CHECK constraint requiring salary \\>= 10000.**
 
-**- Nested Queries**
+**5. Add a CHECK constraint requiring `age >= 18`.**
 
-**- Derived Tables**
+**6. Add a CHECK constraint requiring `age <= 60`.**
 
-**- Inline Views**
+**7. Add a CHECK constraint requiring department to be `'IT'`, `'HR'`, or `'SALES'`.**
 
-**- Aggregate Subqueries**
+**8. Add a CHECK constraint requiring email to contain `'@'`.**
 
+**9. Add a CHECK constraint requiring salary between `20000` and `200000`.**
 
-
-&#x20;**### Exercises**
-
-
-
-&#x20;**- Find departments with an average salary above 50,000.**
-
-**- Find departments where the maximum salary is above 55,000.**
-
-**- Find departments where total salary is above 80,000.**
-
-**- Find departments where minimum salary is below 50,000.**
+**10. Drop the CHECK constraint.**
 
 
 
@@ -464,227 +400,39 @@
 
 
 
-&#x20;## Day 11 — String Functions
+&#x20;**## Your Daily Routine**
 
 
 
-&#x20;### Topics
+&#x20;**A good way to practice these is:**
 
 
 
-&#x20;**- CONCAT**
+&#x20;**- \*\*Day 1:\*\* CASE — 10 questions**
 
-**- CONCAT\\\_WS**
+**- \*\*Day 2:\*\* Subqueries — 10 questions**
 
-**- SUBSTRING**
+**- \*\*Day 3:\*\* String Functions — 10 questions**
 
-**- LEFT**
+**- \*\*Day 4:\*\* Date Functions — 10 questions**
 
-**- RIGHT**
+**- \*\*Day 5:\*\* ALTER TABLE — 10 questions**
 
-**- LEN**
+**- \*\*Day 6:\*\* Rename — 10 questions**
 
-**- UPPER**
+**- \*\*Day 7:\*\* Change Datatype — 10 questions**
 
-**- LOWER**
+**- \*\*Day 8:\*\* DEFAULT — 10 questions**
 
-**- TRIM**
+**- \*\*Day 9:\*\* UNIQUE — 10 questions**
 
-**- LTRIM**
+**- \*\*Day 10:\*\* CHECK — 10 questions**
 
-**- RTRIM**
 
-**- REPLACE**
 
-**- REVERSE**
+&#x20;**\*\*Best method:\*\* Don't look at your notes while solving. Write the query yourself, run it, and if you get an error, try fixing it before checking the solution.**
 
-**- CHARINDEX**
 
 
-
-&#x20;**### Exercises**
-
-
-
-&#x20;**- Create employee full names.**
-
-**- Extract a portion of an employee's name.**
-
-**- Extract the first character of a department.**
-
-**- Extract the last characters of a name.**
-
-**- Find the length of employee names.**
-
-**- Convert names to uppercase and lowercase.**
-
-**- Remove unwanted spaces.**
-
-**- Replace specific text within a column.**
-
-**- Reverse employee names.**
-
-**- Find the position of a specific character.**
-
-**- Create a formatted employee summary.**
-
-
-
-**---**
-
-
-
-&#x20;## Day 12 — Date \& Time Functions
-
-
-
-&#x20;### Topics
-
-
-
-&#x20;- GETDATE
-
-\- SYSDATETIME
-
-\- DATE
-
-\- DATETIME
-
-\- CAST
-
-\- CONVERT
-
-\- YEAR
-
-\- MONTH
-
-\- DAY
-
-\- DATEPART
-
-\- DATENAME
-
-\- DATEDIFF
-
-\- DATEADD
-
-
-
-&#x20;**### Exercises**
-
-
-
-&#x20;**- Retrieve the current date.**
-
-**- Retrieve the current date and time.**
-
-**- Extract the year from a hire date.**
-
-**- Extract the month from a hire date.**
-
-**- Extract the day from a hire date.**
-
-**- Calculate employee tenure.**
-
-**- Find employees hired after a specific year.**
-
-**- Calculate future dates using DATEADD.**
-
-
-
-**---**
-
-
-
-&#x20;## SQL Learning Progression
-
-
-
-```
-
-Database Fundamentals
-
-&#x20;       ↓
-
-CRUD Operations
-
-&#x20;       ↓
-
-Data Types
-
-&#x20;       ↓
-
-Constraints
-
-&#x20;       ↓
-
-SELECT \& Filtering
-
-&#x20;       ↓
-
-Operators \& CASE
-
-&#x20;       ↓
-
-Aggregate Functions
-
-&#x20;       ↓
-
-GROUP BY \& HAVING
-
-&#x20;       ↓
-
-ROLLUP \& NULL Handling
-
-&#x20;       ↓
-
-Subqueries \& Derived Tables
-
-&#x20;       ↓
-
-String Functions
-
-&#x20;       ↓
-
-Date \& Time Functions
-
-```
-
-
-
-&#x20;### Next Topics
-
-
-
-&#x20;- JOINs
-
-\- INNER JOIN
-
-\- LEFT JOIN
-
-\- RIGHT JOIN
-
-\- FULL OUTER JOIN
-
-\- Self JOIN
-
-\- Common Table Expressions (CTEs)
-
-\- Window Functions
-
-\- Views
-
-\- Stored Procedures
-
-\- Transactions
-
-\- Indexes
-
-\- Query Optimization
-
-\- Database Normalization
-
-
-
-&#x20;This keeps your original material intact in terms of \*\*topics and exercises\*\*, but presents it as a clean progression you can continue adding to day by day.
+&#x20;**If you want, I can also make the \*\*next 100 questions slightly harder (Level 2)\*\* using the same topics.**
 
